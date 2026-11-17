@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fbf8f3">
+<title>こよみ帳</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">こよみ帳</div>
+  <div class="nav">
+    <button class="icon-btn" id="prev" title="前へ (←)">‹</button>
+    <button class="btn" id="today">今日</button>
+    <button class="icon-btn" id="next" title="次へ (→)">›</button>
+    <h1 id="title"></h1>
+    <button class="sync-chip" id="sync-chip"></button>
+  </div>
+  <div class="views" role="tablist">
+    <button data-view="month">月</button>
+    <button data-view="week">週</button>
+    <button data-view="list">一覧</button>
+  </div>
+  <div class="tools">
+    <button class="btn" id="btn-filter">絞り込み<span class="badge" id="filter-count" hidden></span></button>
+    <button class="btn" id="btn-search">検索</button>
+    <button class="btn primary" id="btn-add">＋ 予定</button>
+    <button class="icon-btn" id="btn-settings" title="設定">⚙</button>
+  </div>
+</header>
+<div id="filterbar" class="filterbar" hidden></div>
+<main id="main"></main>
+<div id="panel-backdrop" class="panel-backdrop" hidden></div>
+<aside id="daypanel" class="daypanel" hidden></aside>
+<div id="modal-root"></div>
+<div id="toast" class="toast"></div>
+<script src="config.js"></script>
+<script src="markdown.js"></script>
+<script src="holidays.js"></script>
+<script src="zip.js"></script>
+<script src="gdrive.js"></script>
+<script src="store.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
